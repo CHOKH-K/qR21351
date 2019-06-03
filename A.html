@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		img{
+			width: 100px;
+			position: absolute;
+			display: none
+		}
+	</style>
+</head>
+<body>
+		
+	<div style="background-image: url(game.png); height: 1000px; background-size: 100% 100%">
+		<img src="sunflower.png" style="position: absolute; margin-left: 20%; display: block" class="fdk1">
+		<img src="peashooter.png" style="position: absolute; margin-left: 25%; display: block" class="fdk2">	
+
+		<!--цветы 1 ряд-->
+		<img class="sun" src="sunflower.png"  style=" margin-left: 33%; margin-top: 13%; ">
+		<img class="sun" src="sunflower.png"  style=" margin-left: 33%; margin-top: 19%; ">
+		<img class="sun" src="sunflower.png"  style=" margin-left: 33%; margin-top: 25%; ">
+		<img class="sun" src="sunflower.png"  style=" margin-left: 33%; margin-top: 31%; ">
+		<img class="sun" src="sunflower.png"  style=" margin-left: 33%; margin-top: 37%; ">
+		<button class="flower_btn" style="color: red; font-weight: bold; position: absolute; margin-left: 33%; margin-top: 17%; ">PLANT</button>	
+		<button class="flower_btn" style="color: red; font-weight: bold; position: absolute; margin-left: 33%; margin-top: 23%; ">PLANT</button>
+		<button class="flower_btn" style="color: red; font-weight: bold; position: absolute; margin-left: 33%; margin-top: 29%; ">PLANT</button>
+		<button class="flower_btn" style="color: red; font-weight: bold; position: absolute; margin-left: 33%; margin-top: 35%; ">PLANT</button>
+		<button class="flower_btn" style="color: red; font-weight: bold; position: absolute; margin-left: 33%; margin-top: 41%; ">PLANT</button>
+
+		<!--цветы 2 ряд-->
+		<img class="shooter" src="peashooter.png"  style=" margin-left: 40%; margin-top: 13%; ">
+		<img class="shooter" src="peashooter.png"  style=" margin-left: 40%; margin-top: 19%; ">
+		<img class="shooter" src="peashooter.png"  style=" margin-left: 40%; margin-top: 25%; ">
+		<img class="shooter" src="peashooter.png"  style=" margin-left: 40%; margin-top: 31%; ">
+	   	<img class="shooter" src="peashooter.png"  style=" margin-left: 40%; margin-top: 37%; ">
+		<button class="flower_btn" style="color: red; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 17%; ">PLANT</button>	
+		<button class="flower_btn" style="color: red; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 23%; ">PLANT</button>
+		<button class="flower_btn" style="color: red; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 29%; ">PLANT</button>
+		<button class="flower_btn" style="color: red; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 35%; ">PLANT</button>
+		<button class="flower_btn" style="color: red; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 41%; ">PLANT</button>
+
+
+		
+	</div>
+
+<script>
+		let box = document.querySelectorAll(".flower_btn")
+		let site = document.querySelectorAll(".sun")
+		let shoot = document.querySelectorAll(".shooter")
+		let score = 0
+		box[0].onclick = function()
+		{site[0].style.display = "block"
+		box[0].style.display = "none"
+		}
+		box[1].onclick = function()
+		{site[1].style.display = "block"
+		box[1].style.display = "none"
+		}
+		box[2].onclick = function()
+		{site[2].style.display = "block"
+		box[2].style.display = "none"
+		}
+		box[3].onclick = function()
+		{site[3].style.display = "block"
+		box[3].style.display = "none"
+		}
+		box[4].onclick = function()
+		{site[4].style.display = "block"
+		box[4].style.display = "none"
+		}
+		box[5].onclick = function()
+		{shoot[0].style.display = "block"
+		box[5].style.display = "none"
+		}
+		box[6].onclick = function()
+		{shoot[1].style.display = "block"
+		box[6].style.display = "none"
+		}
+		box[7].onclick = function()
+		{shoot[2].style.display = "block"
+		box[7].style.display = "none"
+		}
+		box[8].onclick = function()
+		{shoot[3].style.display = "block"
+		box[8].style.display = "none"
+		}
+		box[9].onclick = function()
+		{shoot[4].style.display = "block"
+		box[9].style.display = "none"
+		}
+
+		
+		document.querySelector(".fdk1").onclick = function(){
+			site[score].style.width = "150px"
+			
+			score = score + 1
+		}
+		document.querySelector(".fdk2").onclick = function(){
+			shoot[0].style.width = "150px"
+			shoot[1].style.width = "150px"
+			shoot[2].style.width = "150px"
+			shoot[3].style.width = "150px"
+			shoot[4].style.width = "150px"	
+		}
+
+
+
+
+</script>
+</body>
+</html>
